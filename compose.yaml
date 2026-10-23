@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: vanescolar
+      POSTGRES_USER: vanescolar
+      POSTGRES_PASSWORD: ${DEV_POSTGRES_PASSWORD:?Configure DEV_POSTGRES_PASSWORD em .env apenas para desenvolvimento}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - van_escolar_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vanescolar -d vanescolar"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+volumes:
+  van_escolar_pg:

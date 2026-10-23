@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "Van Escolar — Gestão do Transporte",
+  "short_name": "Van Escolar",
+  "description": "Gestão simples de alunos, cobranças e despesas de transporte escolar.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f9fd",
+  "theme_color": "#1667d8",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+  ]
+}
